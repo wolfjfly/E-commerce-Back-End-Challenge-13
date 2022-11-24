@@ -14,7 +14,6 @@ Category.init(
         primaryKey: true,
         autoIncrement: true,
       },
-    // String, Doesn't allow null values.
       category_name:{
       type: DataTypes.STRING,
       allowNull: false,
