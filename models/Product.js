@@ -24,14 +24,14 @@ Product.init(
       type: DataTypes.DECIMAL,
       allowNull: false,
       validate: {
-        len: [8],
+        isDecimal: true
       },
     },
     stock:{
       type: DataTypes.STRING,
       allowNull: false,
       validate: {
-        len: [8],
+        isNumeric: true,
       },
     },
     category_id:{
@@ -39,6 +39,7 @@ Product.init(
       references: {
         model: 'category',
         key: 'id',
+        unique: false
       },
     },
 
